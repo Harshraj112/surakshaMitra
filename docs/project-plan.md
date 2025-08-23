@@ -63,8 +63,7 @@ It integrates a **wearable band, voice detection, and mobile application** to qu
 ---
 
 ## 📸 Flowchart
-
-![Flow_chart of Project.pdf]<img width="666" height="717" alt="Screenshot 2025-08-24 at 2 18 10 AM" src="https://github.com/user-attachments/assets/4870a607-2908-469d-adfe-b047997b560f" />
+<img width="666" height="717" alt="Screenshot 2025-08-24 at 2 18 10 AM" src="https://github.com/user-attachments/assets/4870a607-2908-469d-adfe-b047997b560f" />
 
 ---
 
@@ -77,4 +76,5 @@ Pull requests are welcome! For major changes, please open an issue first to disc
 This project is licensed under the **MIT License** – feel free to use, modify, and distribute.  
 
 ---
+
 
