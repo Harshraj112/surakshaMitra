@@ -1,12 +1,22 @@
+// dbConnect.js
 import mongoose from "mongoose";
 
 const dbConnect = async () => {
   try {
     mongoose.set("strictQuery", false);
-    const connected = await mongoose.connect(process.env.MONGO_URL);
-    console.log(`Mongodb connected ${connected.connection.host}`);
+
+    console.log("🔗 Connecting to MongoDB:", process.env.MONGO_URL);
+
+    const connected = await mongoose.connect(process.env.MONGO_URL, {
+      tls: true,            // enforce TLS
+      tlsAllowInvalidCertificates: false,
+      tlsAllowInvalidHostnames: false,
+      serverSelectionTimeoutMS: 5000, // fail fast if cannot connect
+    });
+
+    console.log(`✅ MongoDB connected: ${connected.connection.host}`);
   } catch (error) {
-    console.log(`Error: ${error.message}`);
+    console.error(`❌ MongoDB connection error: ${error.message}`);
     process.exit(1);
   }
 };
