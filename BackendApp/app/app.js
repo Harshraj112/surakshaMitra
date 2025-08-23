@@ -27,6 +27,10 @@ app.head('/', (req, res) => {
   res.sendStatus(200);
 });
 
+app.get('/', (req, res) => {
+  res.send('Welcome to the SurakshaMitra API!');
+});
+
 
 app.use("/api/v1/users", userRoutes);
 app.use("/api/v1/device", deviceRoute);
