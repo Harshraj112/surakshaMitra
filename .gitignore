@@ -1,1 +1,2 @@
-BackendApp/node_modules
+BackendApp/node_modules/
+BackendApp/.env
