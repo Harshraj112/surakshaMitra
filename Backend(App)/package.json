@@ -1,0 +1,12 @@
+{
+  "name": "backend_surakshamitra",
+  "version": "1.0.0",
+  "description": "It is a project we made for status code 2",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "The Fifth QUADrant",
+  "license": "ISC"
+}
