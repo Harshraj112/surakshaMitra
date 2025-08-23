@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans:wght@400;500;700;900&family=Space+Grotesk:wght@400;500;700"
+    />
+    <title>Stitch Design</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Space Grotesk", "Noto Sans", sans-serif;
+            background-color: #111618;
+            color: white;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header Styles */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            white-space: nowrap;
+            border-bottom: 1px solid #283539;
+            padding: 12px 40px;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            color: white;
+        }
+
+        .logo-icon {
+            width: 16px;
+            height: 16px;
+        }
+
+        .logo-text {
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 1.2;
+            letter-spacing: -0.015em;
+        }
+
+        .nav-container {
+            display: flex;
+            flex: 1;
+            justify-content: flex-end;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 36px;
+        }
+
+        .nav-link {
+            color: white;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: normal;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #0db9f2;
+        }
+
+        .download-btn {
+            display: flex;
+            min-width: 84px;
+            max-width: 480px;
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-radius: 8px;
+            height: 40px;
+            padding: 0 16px;
+            background-color: #0db9f2;
+            color: #111618;
+            font-size: 14px;
+            font-weight: bold;
+            line-height: normal;
+            letter-spacing: 0.015em;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .download-btn:hover {
+            background-color: #0aa5d6;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 0 160px;
+            display: flex;
+            flex: 1;
+            justify-content: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            max-width: 960px;
+            flex: 1;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding: 16px;
+        }
+
+        .breadcrumb-link {
+            color: #9cb2ba;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: normal;
+            text-decoration: none;
+        }
+
+        .breadcrumb-separator {
+            color: #9cb2ba;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: normal;
+        }
+
+        .breadcrumb-current {
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: normal;
+        }
+
+        /* Article Header */
+        .article-title {
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            line-height: 1.2;
+            padding: 20px 16px 12px;
+            text-align: left;
+        }
+
+        .article-meta {
+            color: #9cb2ba;
+            font-size: 14px;
+            font-weight: normal;
+            line-height: normal;
+            padding: 4px 16px 12px;
+        }
+
+        /* Hero Image */
+        .hero-image-container {
+            display: flex;
+            width: 100%;
+            background-color: #111618;
+            padding: 12px 0;
+        }
+
+        .hero-image {
+            width: 100%;
+            gap: 4px;
+            overflow: hidden;
+            background-color: #111618;
+            aspect-ratio: 3/2;
+            display: flex;
+        }
+
+        .hero-bg {
+            width: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            flex: 1;
+            background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBST6rSkGxCTGGMccUXGvLP8F6BnIgxRPcyM058n2VfycYlqOzYO4gdveyOXApGXWLt_BEeROvpkjc-tRpkpApVHRD0DuBp0xjeLNaStxLCpAQfJuS90hP_rMDn5Ds1SDhBJ2k74oiLFC6c5835oiMiqrnZq2CsS2BO0NHGR1bFRpkFxeVlPLe13y7DNVFcStClnvx4RPghdEjHdqNZvJ_Rft-_V-BXG9ffYDAxtKUZwHkCTBucdapYU_yde1qWaV8RucIbdfMy0VU");
+        }
+
+        /* Article Content */
+        .article-content {
+            color: white;
+            font-size: 16px;
+            font-weight: normal;
+            line-height: normal;
+            padding: 4px 16px 12px;
+        }
+
+        .section-heading {
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 1.2;
+            letter-spacing: -0.015em;
+            padding: 16px 16px 8px;
+        }
+
+        /* Footer */
+        .footer-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .footer-wrapper {
+            display: flex;
+            max-width: 960px;
+            flex: 1;
+            flex-direction: column;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            padding: 20px 40px;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+        }
+
+        .footer-link {
+            color: #9cb2ba;
+            font-size: 16px;
+            font-weight: normal;
+            line-height: normal;
+            min-width: 160px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: #0db9f2;
+        }
+
+        .footer-copyright {
+            color: #9cb2ba;
+            font-size: 16px;
+            font-weight: normal;
+            line-height: normal;
+        }
+
+        /* Responsive Design */
+        @media (min-width: 480px) {
+            .footer-links {
+                flex-direction: row;
+                justify-content: space-around;
+            }
+
+            .hero-image {
+                gap: 8px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                padding: 0 20px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+
+            header {
+                padding: 12px 20px;
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .nav-container {
+                gap: 16px;
+            }
+
+            .nav-links {
+                gap: 20px;
+            }
+
+            .article-title {
+                font-size: 24px;
+                padding: 16px 16px 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-links {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .footer-link {
+                min-width: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-section">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z"
+                            fill="currentColor"
+                        ></path>
+                    </svg>
+                </div>
+                <h2 class="logo-text">InnovateTech</h2>
+            </div>
+            <div class="nav-container">
+                <nav class="nav-links">
+                    <a class="nav-link" href="#overview">Overview</a>
+                    <a class="nav-link" href="#features">Features</a>
+                    <a class="nav-link" href="#team">Team</a>
+                    <a class="nav-link" href="#blog">Blog</a>
+                </nav>
+                <button class="download-btn" onclick="handleDownload()">
+                    <span>Download App</span>
+                </button>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="content-wrapper">
+                <!-- Breadcrumb -->
+                <nav class="breadcrumb">
+                    <a class="breadcrumb-link" href="#blog">Blog</a>
+                    <span class="breadcrumb-separator">/</span>
+                    <span class="breadcrumb-current">Revolutionizing Urban Mobility</span>
+                </nav>
+
+                <!-- Article Header -->
+                <h1 class="article-title">Revolutionizing Urban Mobility: Introducing the SmartScooter</h1>
+                <p class="article-meta">By Alex Chen | Published on July 15, 2024</p>
+
+                <!-- Hero Image -->
+                <div class="hero-image-container">
+                    <div class="hero-image">
+                        <div class="hero-bg"></div>
+                    </div>
+                </div>
+
+                <!-- Article Content -->
+                <p class="article-content">
+                    In today's fast-paced urban environments, efficient and sustainable transportation is more crucial than ever. We are thrilled to introduce the SmartScooter, a
+                    revolutionary solution designed to transform how we navigate our cities. This innovative electric scooter combines cutting-edge technology with sleek design to offer
+                    a seamless and eco-friendly commuting experience.
+                </p>
+
+                <h3 class="section-heading">Key Features</h3>
+                <p class="article-content">
+                    The SmartScooter boasts several key features that set it apart from traditional scooters. Its integrated GPS system provides real-time navigation and route
+                    optimization, ensuring you always take the fastest path. The companion mobile app allows users to track their scooter's location, monitor battery life, and customize
+                    riding modes for optimal performance. Additionally, the SmartScooter's advanced safety features, including anti-theft protection and responsive braking, ensure a
+                    secure ride.
+                </p>
+
+                <h3 class="section-heading">Design and Functionality</h3>
+                <p class="article-content">
+                    Crafted with a lightweight yet durable frame, the SmartScooter is designed for both portability and stability. Its ergonomic handlebars and intuitive controls make it
+                    easy to maneuver, while the powerful electric motor delivers a smooth and efficient ride. The scooter's long-lasting battery ensures extended use between charges,
+                    making it ideal for daily commutes and leisurely rides alike.
+                </p>
+
+                <h3 class="section-heading">Impact and Sustainability</h3>
+                <p class="article-content">
+                    The SmartScooter is not just about convenience; it's about creating a more sustainable future. By reducing reliance on cars and public transportation, it helps
+                    decrease traffic congestion and lower carbon emissions. Its eco-friendly design and efficient operation contribute to a cleaner and healthier urban environment.
+                </p>
+
+                <h3 class="section-heading">Conclusion</h3>
+                <p class="article-content">
+                    The SmartScooter represents a significant step forward in urban mobility. Its blend of advanced technology, user-friendly design, and commitment to sustainability
+                    makes it an ideal choice for modern city dwellers. We believe the SmartScooter has the potential to revolutionize how we move within our cities, making commutes
+                    faster, greener, and more enjoyable.
+                </p>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer-container">
+            <div class="footer-wrapper">
+                <div class="footer-content">
+                    <div class="footer-links">
+                        <a class="footer-link" href="#overview">Overview</a>
+                        <a class="footer-link" href="#features">Features</a>
+                        <a class="footer-link" href="#team">Team</a>
+                        <a class="footer-link" href="#blog">Blog</a>
+                        <a class="footer-link" href="#download">Download App</a>
+                    </div>
+                    <p class="footer-copyright">@2024 InnovateTech. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Navigation functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for navigation links
+            const navLinks = document.querySelectorAll('.nav-link, .footer-link, .breadcrumb-link');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href && href.startsWith('#')) {
+                        e.preventDefault();
+                        const targetElement = document.querySelector(href);
+                        if (targetElement) {
+                            targetElement.scrollIntoView({
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+
+            // Add scroll effect to header
+            const header = document.querySelector('header');
+            let lastScrollY = window.scrollY;
+
+            window.addEventListener('scroll', function() {
+                const currentScrollY = window.scrollY;
+                
+                if (currentScrollY > 50) {
+                    header.style.backgroundColor = 'rgba(17, 22, 24, 0.95)';
+                    header.style.backdropFilter = 'blur(10px)';
+                } else {
+                    header.style.backgroundColor = 'transparent';
+                    header.style.backdropFilter = 'none';
+                }
+                
+                lastScrollY = currentScrollY;
+            });
+
+            // Add loading animation to hero image
+            const heroImage = document.querySelector('.hero-bg');
+            heroImage.style.opacity = '0';
+            heroImage.style.transform = 'scale(1.1)';
+            heroImage.style.transition = 'opacity 1s ease, transform 1s ease';
+            
+            setTimeout(() => {
+                heroImage.style.opacity = '1';
+                heroImage.style.transform = 'scale(1)';
+            }, 300);
+        });
+
+        // Download button functionality
+        function handleDownload() {
+            // Simulate download process
+            const button = document.querySelector('.download-btn');
+            const originalText = button.innerHTML;
+            
+            button.innerHTML = '<span>Downloading...</span>';
+            button.disabled = true;
+            button.style.opacity = '0.7';
+            
+            setTimeout(() => {
+                button.innerHTML = '<span>Downloaded!</span>';
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.disabled = false;
+                    button.style.opacity = '1';
+                }, 1500);
+            }, 2000);
+        }
+
+        // Add intersection observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Apply fade-in animation to content sections
+        document.addEventListener('DOMContentLoaded', function() {
+            const contentElements = document.querySelectorAll('.article-content, .section-heading');
+            
+            contentElements.forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(element);
+            });
+        });
+
+        // Mobile menu toggle (for future expansion)
+        function toggleMobileMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('mobile-active');
+        }
+
+        // Add smooth hover effects for interactive elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const interactiveElements = document.querySelectorAll('.nav-link, .footer-link, .download-btn');
+            
+            interactiveElements.forEach(element => {
+                element.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-2px)';
+                });
+                
+                element.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
