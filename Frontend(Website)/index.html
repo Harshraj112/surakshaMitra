@@ -5,803 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans:wght@400;500;700;900&family=Space+Grotesk:wght@400;500;700">
-    <title>Stitch Design</title>
+    <title>Suraksha Mitra</title>
     <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,">
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: "Space Grotesk", "Noto Sans", sans-serif;
-            background-color: #111618;
-            color: white;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .container {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            flex-grow: 1;
-        }
-
-        /* Header */
-        header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 12px 40px;
-            border-bottom: 1px solid #283539;
-            white-space: nowrap;
-        }
-
-        .logo-section {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            color: white;
-        }
-
-        .logo {
-            width: 16px;
-            height: 16px;
-        }
-
-        .logo svg {
-            width: 100%;
-            height: 100%;
-        }
-
-        .company-name {
-            font-size: 18px;
-            font-weight: bold;
-            line-height: 1.2;
-            letter-spacing: -0.015em;
-        }
-
-        .nav-section {
-            display: flex;
-            flex: 1;
-            justify-content: flex-end;
-            gap: 32px;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 36px;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 500;
-        }
-
-        .theme-button, .download-button, .send-button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 8px 16px;
-            border-radius: 8px;
-            border: none;
-            cursor: pointer;
-            font-size: 14px;
-            font-weight: bold;
-            letter-spacing: 0.015em;
-            min-width: 84px;
-        }
-
-        .theme-button {
-            background-color: #283539;
-            color: white;
-            height: 40px;
-        }
-
-        .download-button, .send-button {
-            background-color: #0db9f2;
-            color: #111618;
-            height: 40px;
-        }
-
-        .user-avatar {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB0zHj7n1h97sJS7ttZGhrasI5NpYQpF4nwIoekkTDAgKh361l4Jh9V8exkaBX5EdfxDa1Poc3242G3PtEigZFpl6kZ8vTvCMXvcDPmoNH2DAy50VU9FHi0VepyyMILX8b0cjz_FQ0rih_Y_sXI9SKfq_kFkEsRb69GRondHLbgwhhxBRSVu-G_gftEWIL5F7ItBD786rbUMOPEbWMyui5A1Hz6xtNdeZHnxo09ZUJs7yoKuNakZwPa7_s8CgLqGhmjGLx8QhmBBTI");
-            background-size: cover;
-            background-position: center;
-        }
-
-        /* Main content */
-        .main-content {
-            padding: 0 160px;
-            display: flex;
-            flex: 1;
-            justify-content: center;
-            padding-top: 20px;
-            padding-bottom: 20px;
-        }
-
-        .content-container {
-            display: flex;
-            flex-direction: column;
-            max-width: 960px;
-            flex: 1;
-        }
-
-        /* Hero section */
-        .hero-section {
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
-            padding: 40px 16px;
-        }
-
-        .hero-content {
-            display: flex;
-            gap: 24px;
-            align-items: center;
-        }
-
-        .hero-image {
-            width: 50%;
-            aspect-ratio: 16/9;
-            background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB1hPDdfH-vG-FWavNpKt9DHy-72Vxs3UkSUpTxMcvCBanIV8-oEVW5n2lrRhD43A8-Jcy9BZnLyClR6PM40vuDyIzrNWSbCK3B9EDulzKZ1QsJmH5D04PzOuoKdooe8TX9_k_knV0_mgyTMHJwbD0lhxTJ5EPZRcZFDcVuKG5IEr9kKtbPUI2BjalBJ64CQwoGEYGOo947zqsDwttCdcoTHMTFW4ZePPQUlVmyrMDLP3pFjIykbYdlUc8MLuCdOsZiEClkpgv13fM");
-            background-size: cover;
-            background-position: center;
-            border-radius: 8px;
-        }
-
-        .hero-text {
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
-            width: 50%;
-            justify-content: center;
-        }
-
-        .hero-title {
-            font-size: 36px;
-            font-weight: 900;
-            line-height: 1.1;
-            letter-spacing: -0.033em;
-        }
-
-        .hero-subtitle {
-            font-size: 14px;
-            font-weight: normal;
-            line-height: 1.4;
-        }
-
-        /* Section headers */
-        .section-header {
-            font-size: 22px;
-            font-weight: bold;
-            line-height: 1.2;
-            letter-spacing: -0.015em;
-            padding: 20px 16px 12px;
-        }
-
-        /* How it works section */
-        .how-it-works {
-            padding: 40px 16px;
-        }
-
-        .section-intro {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            margin-bottom: 40px;
-        }
-
-        .section-title {
-            font-size: 32px;
-            font-weight: bold;
-            line-height: 1.2;
-            letter-spacing: -0.033em;
-            max-width: 720px;
-        }
-
-        .section-description {
-            font-size: 16px;
-            font-weight: normal;
-            line-height: 1.4;
-            max-width: 720px;
-        }
-
-        .steps-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(158px, 1fr));
-            gap: 12px;
-        }
-
-        .step-card {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            padding: 16px;
-            border: 1px solid #3b4e54;
-            background-color: #1b2427;
-            border-radius: 8px;
-        }
-
-        .step-icon {
-            width: 24px;
-            height: 24px;
-            color: white;
-        }
-
-        .step-title {
-            font-size: 16px;
-            font-weight: bold;
-            line-height: 1.2;
-            color: white;
-        }
-
-        .step-description {
-            font-size: 14px;
-            font-weight: normal;
-            line-height: 1.4;
-            color: #9cb2ba;
-        }
-
-        /* Demo video section */
-        .demo-video {
-            padding: 16px;
-        }
-
-        .video-container {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            aspect-ratio: 16/9;
-            border-radius: 8px;
-            padding: 16px;
-            background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD6knsIi5FC_5oLj5u6mx_hE_OgkIK1beLECkBa-2JSufIkVxivpxrIkm8bojuGpJ_z4w294w82HhgtNbR2PQ3Ue4swcOHhoProCv55h7jNI_58DewiG6A1p9fJyJKwz4g0JzpdzKlcsPCWrSKCeh1emBd13avXeNR_XLxuvfGbCcQ-iUvxpHgQwxwqwCkYq4KEhC4Bxa3ldk3R7ota3133fXRCppz0HjmsqLxCW6zYiLkEhXfLEWs5SP3U3hzHq1j8etxak4q8m24");
-            background-size: cover;
-            background-position: center;
-        }
-
-        .play-button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 64px;
-            height: 64px;
-            border-radius: 50%;
-            background-color: rgba(0, 0, 0, 0.4);
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-
-        .play-button svg {
-            width: 24px;
-            height: 24px;
-        }
-
-        /* App screenshots */
-        .screenshots-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(158px, 1fr));
-            gap: 12px;
-            padding: 16px;
-        }
-
-        .screenshot {
-            width: 100%;
-            aspect-ratio: 3/4;
-            border-radius: 8px;
-            background-size: cover;
-            background-position: center;
-        }
-
-        .screenshot:nth-child(1) {
-            background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCoRZoYu5iPVrDe5ZB9AtemH5W4DHWBWaL3rziljqudSXmj84KFqkV5VqzlrVi4KvLB4rSM4g7_pBMGej7ASEPEhEWE-eKiP9xkEy1NfYBvjFsg7d-bouXvKEimfpB2RRJcmy3br_ySRtqLPsRti0YwnBAqtA3QQ4hPHQ-LXbOLGyY4egNXYy0pjO-_rgjmS0t46P3B6RDW_8A-MWJih_eMn9_VksOOitWnnY_68KUEDnLaVL7D9ZG8OnOp5az0vR80j9s_tdeAye0");
-        }
-
-        .screenshot:nth-child(2) {
-            background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBdVwWzy8JACAMiwZXaeaj4HGKEhlYY3k4WwE-jHltJCAvd54b8Um4eWups7jcYc5D0wCZRK0tj8Mt_19cl7ojBxYK9y9sEEruUp-0LI-2KhetQZFxlI2m89QMFaza2c-n5kfqokiamvL4EElUjwx01yUNxPyAXLiPno7OO7ghQS13eGe0t2blzxaCyvbB6AsM8ukps0-ONvnh6smEP7wLHN73uP4nGjElGOyCRqgVKjA62HHAwXY51UsLTV_jrUdE4aSekVbYEt7U");
-        }
-
-        .screenshot:nth-child(3) {
-            background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDZliWkyjnWia6GtoD-g5axEj820rnxn4-gpZZzouwehY2JvF1XLcgJAv2zspMmv5aAXdGcKVF7Gi9dF1-n-KNdVyJ6V0-ckk61SwvyILnKtEBpVnKFLZreLhBbbAJy4SSbuLaxMTD70Csz_d3NysOqJ8_FbwCcFuHHs8K3l_vgF0fem1DTqtJR-W2XxPkWThEfsRgUvUIHMd2w3AWCTCnhtdWkuNiXn1HnWqg6lm00G-PwJhCzy81PpesnjYgwsBWuejqI0OT6B_I");
-        }
-
-        /* Timeline */
-        .timeline {
-            display: grid;
-            grid-template-columns: 40px 1fr;
-            gap: 8px;
-            padding: 16px;
-        }
-
-        .timeline-icon {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 4px;
-            padding-top: 12px;
-        }
-
-        .timeline-icon svg {
-            width: 24px;
-            height: 24px;
-        }
-
-        .timeline-line {
-            width: 1.5px;
-            background-color: #3b4e54;
-            height: 8px;
-            flex-grow: 1;
-        }
-
-        .timeline-content {
-            display: flex;
-            flex-direction: column;
-            padding: 12px 0;
-        }
-
-        .timeline-title {
-            font-size: 16px;
-            font-weight: 500;
-            color: white;
-        }
-
-        .timeline-date {
-            font-size: 16px;
-            font-weight: normal;
-            color: #9cb2ba;
-        }
-
-        /* Team section */
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(158px, 1fr));
-            gap: 12px;
-            padding: 16px;
-        }
-
-        .team-member {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            text-align: center;
-            padding-bottom: 12px;
-        }
-
-        .member-avatar {
-            width: 100%;
-            aspect-ratio: 1;
-            border-radius: 50%;
-            background-size: cover;
-            background-position: center;
-            padding: 0 16px;
-        }
-
-        .member-name {
-            font-size: 16px;
-            font-weight: 500;
-            color: white;
-        }
-
-        .member-role {
-            font-size: 14px;
-            font-weight: normal;
-            color: #9cb2ba;
-        }
-
-        .member-avatar:nth-of-type(1) {
-            background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBH0lqnRjfaZ1eCL94qG7K8mOdhuFqYi2n0ju5ETY9_-SUhHVK3-aLz7csdhK6sL3pqfRU1JEWKenWwfOFsiWJl9OAOewyXeFOZ56pAGSbhZehm7V4HkkszBvEiSjuZlZx1abnWhSxucigOlMp86VPpphqO54__mVcO60rUAtYBoqNkO9JaGgo-3VrKT29lMNGIYRTlNQTsY3KQGn3MKAdeE_JjXOJ-q5RjTvBLQk6Tw47CSm8P6QCeYsx8GVN2pmIZKSA6A1NFaQk");
-        }
-
-        /* Blog section */
-        .blog-post {
-            padding: 16px;
-        }
-
-        .blog-content {
-            display: flex;
-            align-items: stretch;
-            justify-content: space-between;
-            gap: 16px;
-            border-radius: 8px;
-        }
-
-        .blog-text {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            flex: 2;
-        }
-
-        .blog-meta {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-        }
-
-        .blog-author {
-            font-size: 14px;
-            font-weight: normal;
-            color: #9cb2ba;
-        }
-
-        .blog-title {
-            font-size: 16px;
-            font-weight: bold;
-            color: white;
-            line-height: 1.2;
-        }
-
-        .blog-description {
-            font-size: 14px;
-            font-weight: normal;
-            color: #9cb2ba;
-            line-height: 1.4;
-        }
-
-        .read-more-button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 6px 16px;
-            background-color: #283539;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 14px;
-            font-weight: 500;
-            cursor: pointer;
-            width: fit-content;
-            height: 32px;
-        }
-
-        .blog-image {
-            width: 100%;
-            aspect-ratio: 16/9;
-            border-radius: 8px;
-            background-size: cover;
-            background-position: center;
-            flex: 1;
-        }
-
-        .blog-image:nth-of-type(1) {
-            background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCPepoiQftcYfuxp8lHSl1gi2E4VbQPXk3bEFhdthDqvHVhjCw_3qPEmxHPaTUCc-EUK2xRR_e9in7BwlZYIgkNcbC0jkmE8fAqvsiT2-IFD_2IV4SwvyaW06On4kwV6jPQ9XyWtUUkAl0hXceBxPhq1bHjpIqgNf2oiGriqPDKMlFQjgHkzCTYca9fos1Oq8n6zd2qvFA71u9Bgz6fsCeUZAeaMDfWV6DYHAkpskTZxdbeUwJCalx_WLsKYLM8lZqqVn8re1Qu4h4");
-        }
-
-        /* Tech stack */
-        .tech-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(158px, 1fr));
-            gap: 12px;
-            padding: 16px;
-        }
-
-        .tech-item {
-            aspect-ratio: 1;
-            border-radius: 8px;
-            background-color: #283539;
-        }
-
-        /* Download section */
-        .download-section {
-            display: flex;
-            justify-content: center;
-        }
-
-        .download-buttons {
-            display: flex;
-            gap: 12px;
-            padding: 12px 16px;
-            max-width: 480px;
-            justify-content: center;
-            flex: 1;
-        }
-
-        .download-buttons button {
-            flex: 1;
-        }
-
-        .app-store-button {
-            background-color: #283539;
-            color: white;
-        }
-
-        /* Stats section */
-        .stats-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 16px;
-            padding: 16px;
-        }
-
-        .stat-card {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            padding: 24px;
-            background-color: #283539;
-            border-radius: 8px;
-            min-width: 158px;
-            flex: 1;
-        }
-
-        .stat-label {
-            font-size: 16px;
-            font-weight: 500;
-            color: white;
-        }
-
-        .stat-value {
-            font-size: 24px;
-            font-weight: bold;
-            line-height: 1.2;
-            color: white;
-        }
-
-        /* FAQ section */
-        .faq-container {
-            display: flex;
-            flex-direction: column;
-            padding: 16px;
-            gap: 12px;
-        }
-
-        .faq-item {
-            border: 1px solid #3b4e54;
-            background-color: #111618;
-            border-radius: 8px;
-            padding: 7px 15px;
-        }
-
-        .faq-summary {
-            display: flex;
-            cursor: pointer;
-            align-items: center;
-            justify-content: space-between;
-            gap: 24px;
-            padding: 8px 0;
-        }
-
-        .faq-question {
-            font-size: 14px;
-            font-weight: 500;
-            color: white;
-        }
-
-        .faq-icon {
-            width: 20px;
-            height: 20px;
-            color: white;
-            transition: transform 0.2s;
-        }
-
-        .faq-item[open] .faq-icon {
-            transform: rotate(180deg);
-        }
-
-        .faq-answer {
-            font-size: 14px;
-            font-weight: normal;
-            line-height: 1.4;
-            color: #9cb2ba;
-            padding-bottom: 8px;
-        }
-
-        /* Contact form */
-        .contact-form {
-            max-width: 480px;
-        }
-
-        .form-group {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: flex-end;
-            gap: 16px;
-            padding: 12px 16px;
-        }
-
-        .form-field {
-            display: flex;
-            flex-direction: column;
-            min-width: 160px;
-            flex: 1;
-        }
-
-        .form-label {
-            font-size: 16px;
-            font-weight: 500;
-            color: white;
-            padding-bottom: 8px;
-        }
-
-        .form-input, .form-textarea {
-            width: 100%;
-            padding: 16px;
-            border: none;
-            border-radius: 8px;
-            background-color: #283539;
-            color: white;
-            font-size: 16px;
-            font-weight: normal;
-            line-height: 1.4;
-            resize: none;
-            outline: none;
-        }
-
-        .form-input {
-            height: 56px;
-        }
-
-        .form-textarea {
-            min-height: 144px;
-        }
-
-        .form-input::placeholder, .form-textarea::placeholder {
-            color: #9cb2ba;
-        }
-
-        .form-submit {
-            display: flex;
-            padding: 12px 16px;
-            justify-content: flex-end;
-        }
-
-        /* Footer */
-        footer {
-            display: flex;
-            justify-content: center;
-        }
-
-        .footer-content {
-            display: flex;
-            max-width: 960px;
-            flex: 1;
-            flex-direction: column;
-        }
-
-        .footer-inner {
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        .footer-links {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
-            gap: 24px;
-        }
-
-        .footer-links a {
-            color: #9cb2ba;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: normal;
-            min-width: 160px;
-        }
-
-        .social-links {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 16px;
-        }
-
-        .social-links a {
-            color: #9cb2ba;
-        }
-
-        .social-links svg {
-            width: 24px;
-            height: 24px;
-        }
-
-        .copyright {
-            color: #9cb2ba;
-            font-size: 16px;
-            font-weight: normal;
-        }
-
-        /* Responsive design */
-        @media (max-width: 1200px) {
-            .main-content {
-                padding: 0 80px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .main-content {
-                padding: 0 20px;
-            }
-
-            header {
-                padding: 12px 20px;
-            }
-
-            .nav-links {
-                display: none;
-            }
-
-            .hero-content {
-                flex-direction: column;
-            }
-
-            .hero-image, .hero-text {
-                width: 100%;
-            }
-
-            .hero-title {
-                font-size: 28px;
-            }
-
-            .section-title {
-                font-size: 24px;
-            }
-
-            .blog-content {
-                flex-direction: column;
-            }
-
-            .footer-links {
-                flex-direction: column;
-                gap: 16px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .nav-section {
-                gap: 16px;
-            }
-
-            .download-buttons {
-                flex-direction: column;
-            }
-
-            .stats-grid {
-                flex-direction: column;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <div class="container">
         <header>
             <div class="logo-section">
                 <div class="logo">
-                    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_6_330)">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z" fill="currentColor"></path>
                         </g>
                         <defs>
                             <clipPath id="clip0_6_330"><rect width="48" height="48" fill="white"></rect></clipPath>
                         </defs>
-                    </svg>
+                    </svg> -->
+                    <img src="./assets/images/Untitled_design-removebg-preview.png" alt="Suraksha Mitra Logo" class="logo-image">
                 </div>
-                <h2 class="company-name">Project Echo</h2>
+                <h2 class="company-name">Suraksha Mitra</h2>
             </div>
             <div class="nav-section">
                 <div class="nav-links">
-                    <a href="#">Home</a>
-                    <a href="#">Features</a>
-                    <a href="#">Team</a>
-                    <a href="#">Blog</a>
-                    <a href="#">Contact</a>
+                    <a href="index.html">Home</a>
+                    <a href="#demo-video">Features</a>
+                    <a href="#team-grid">Team</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="#contact-form">Contact</a>
                 </div>
-                <button class="theme-button">Light/Dark</button>
+                <button class="download-button">Download</button>
                 <div class="user-avatar"></div>
             </div>
         </header>
@@ -813,18 +46,18 @@
                         <div class="hero-image"></div>
                         <div class="hero-text">
                             <div>
-                                <h1 class="hero-title">Project Echo: Connecting the Physical and Digital Worlds</h1>
-                                <h2 class="hero-subtitle">A revolutionary mobile app and hardware solution designed to bridge the gap between physical interactions and digital experiences. Explore how we're transforming everyday tasks with seamless integration and intuitive design.</h2>
+                                <h1 class="hero-title">Suraksha Mitra: Combining technology and care to protect you</h1>
+                                <h2 class="hero-subtitle">Suraksha Mitra is a smart safety companion designed to provide instant help at the tap of a button. Combining powerful technology with trusted care, it ensures protection, connectivity, and peace of mind in every emergency.</h2>
                             </div>
-                            <button class="download-button">Get Started</button>
+                            <button class="download-button">Download</button>
                         </div>
                     </div>
                 </div>
 
-                <h2 class="section-header">How It Works</h2>
+                <h1 class="section-header">How It Works</h1>
                 <div class="how-it-works">
                     <div class="section-intro">
-                        <h1 class="section-title">Seamless Integration in Three Steps</h1>
+                        <h2 class="section-title">Seamless Integration in Three Steps</h2>
                         <p class="section-description">Our system is designed for simplicity and efficiency, ensuring a smooth user experience from setup to daily use.</p>
                     </div>
                     <div class="steps-grid">
@@ -841,13 +74,47 @@
                         </div>
                         <div class="step-card">
                             <div class="step-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/>
+                                    <path d="M104,126.94a64,64,0,0,1,80-90.29L144,80l5.66,26.34L176,112l43.35-40a64,64,0,0,1-90.29,80L73,217A24,24,0,0,1,39,183Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+                                </svg>
+                            </div>
+                            <div class="step-content">
+                                <h2 class="step-title">Set Up</h2>
+                                <p class="step-description">Add your emergency contacts and personalize your SOS settings to suit your needs.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="step-card">
+                            <div class="step-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
                                     <path d="M176,16H80A24,24,0,0,0,56,40V216a24,24,0,0,0,24,24h96a24,24,0,0,0,24-24V40A24,24,0,0,0,176,16ZM72,64H184V192H72Zm8-32h96a8,8,0,0,1,8,8v8H72V40A8,8,0,0,1,80,32Zm96,192H80a8,8,0,0,1-8-8v-8H184v8A8,8,0,0,1,176,224Z"></path>
                                 </svg>
                             </div>
                             <div class="step-content">
                                 <h2 class="step-title">Interact</h2>
-                                <p class="step-description">Use the app to interact with physical objects, triggering digital actions in real-time.</p>
+                                <p class="step-description">Easily interact with Suraksha Mitra to trigger real-time safety features, from SOS alerts to instant location sharing</p>
+                            </div>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/>
+                                    <path d="M96,192a32,32,0,0,0,64,0" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M184,24a102.71,102.71,0,0,1,36.29,40" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M35.71,64A102.71,102.71,0,0,1,72,24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M56,112a72,72,0,0,1,144,0c0,35.82,8.3,56.6,14.9,68A8,8,0,0,1,208,192H48a8,8,0,0,1-6.88-12C47.71,168.6,56,147.81,56,112Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+                                </svg>
+                            </div>
+                            <div class="step-content">
+                                <h2 class="step-title">Stay Notified</h2>
+                                <p class="step-description">Receive instant alerts and updates, ensuring your loved ones are aware in critical moments.</p>
+                            </div>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><circle cx="128" cy="128" r="96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+                                    <path d="M120,120a8,8,0,0,1,8,8v40a8,8,0,0,0,8,8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><circle cx="124" cy="84" r="12"/>
+                                </svg>
+                            </div>
+                            <div class="step-content">
+                                <h2 class="step-title">Reach Help</h2>
+                                <p class="step-description">Instantly connect with critical emergency contacts like police, ambulance, or trusted guardians at the press of a button.</p>
                             </div>
                         </div>
                         <div class="step-card">
@@ -858,14 +125,14 @@
                             </div>
                             <div class="step-content">
                                 <h2 class="step-title">Experience</h2>
-                                <p class="step-description">Enjoy a unified experience where physical actions seamlessly translate into digital outcomes.</p>
+                                <p class="step-description">Enjoy a seamless blend of intuitive design and powerful safety features, delivering confidence and peace of mind every time you use the app.</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <h2 class="section-header">Demo Video</h2>
-                <div class="demo-video">
+                <div class="demo-video" id = "demo-video">
                     <div class="video-container">
                         <button class="play-button">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
@@ -892,7 +159,7 @@
                     </div>
                     <div class="timeline-content">
                         <p class="timeline-title">Idea Conception</p>
-                        <p class="timeline-date">January 2024</p>
+                        <p class="timeline-date">July 2025</p>
                     </div>
                     
                     <div class="timeline-icon">
@@ -904,19 +171,7 @@
                     </div>
                     <div class="timeline-content">
                         <p class="timeline-title">Development Phase</p>
-                        <p class="timeline-date">February - March 2024</p>
-                    </div>
-                    
-                    <div class="timeline-icon">
-                        <div class="timeline-line"></div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                            <path d="M152,56V176a8,8,0,0,1-16,0V124H48v52a8,8,0,0,1-16,0V56a8,8,0,0,1,16,0v52h88V56a8,8,0,0,1,16,0Zm73.52,90.63,21-30A8,8,0,0,0,240,104H192a8,8,0,0,0,0,16h32.63l-19.18,27.41A8,8,0,0,0,212,160a20,20,0,1,1-14.29,34,8,8,0,1,0-11.42,11.19A36,36,0,0,0,248,180,36.07,36.07,0,0,0,225.52,146.63Z"></path>
-                        </svg>
-                        <div class="timeline-line"></div>
-                    </div>
-                    <div class="timeline-content">
-                        <p class="timeline-title">Testing and Refinement</p>
-                        <p class="timeline-date">April 2024</p>
+                        <p class="timeline-date">August 2025</p>
                     </div>
                     
                     <div class="timeline-icon">
@@ -927,31 +182,60 @@
                     </div>
                     <div class="timeline-content">
                         <p class="timeline-title">Hackathon Submission</p>
-                        <p class="timeline-date">May 2024</p>
+                        <p class="timeline-date">August 2025</p>
                     </div>
+
+                    <div class="timeline-icon">
+                        <div class="timeline-line"></div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                            <path d="M152,56V176a8,8,0,0,1-16,0V124H48v52a8,8,0,0,1-16,0V56a8,8,0,0,1,16,0v52h88V56a8,8,0,0,1,16,0Zm73.52,90.63,21-30A8,8,0,0,0,240,104H192a8,8,0,0,0,0,16h32.63l-19.18,27.41A8,8,0,0,0,212,160a20,20,0,1,1-14.29,34,8,8,0,1,0-11.42,11.19A36,36,0,0,0,248,180,36.07,36.07,0,0,0,225.52,146.63Z"></path>
+                        </svg>
+                        <div class="timeline-line"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <p class="timeline-title">Refinements</p>
+                        <p class="timeline-date">Future scope...</p>
+                    </div>
+                    
                 </div>
 
                 <h2 class="section-header">Meet the Team</h2>
-                <div class="team-grid">
+                <div class="team-grid" id="team-grid">
                     <div class="team-member">
-                        <div class="member-avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBH0lqnRjfaZ1eCL94qG7K8mOdhuFqYi2n0ju5ETY9_-SUhHVK3-aLz7csdhK6sL3pqfRU1JEWKenWwfOFsiWJl9OAOewyXeFOZ56pAGSbhZehm7V4HkkszBvEiSjuZlZx1abnWhSxucigOlMp86VPpphqO54__mVcO60rUAtYBoqNkO9JaGgo-3VrKT29lMNGIYRTlNQTsY3KQGn3MKAdeE_JjXOJ-q5RjTvBLQk6Tw47CSm8P6QCeYsx8GVN2pmIZKSA6A1NFaQk');"></div>
+                        <div class="member-avatar" style="background-image: url('./assets/images/devjha.png');"></div>
                         <div>
-                            <p class="member-name">Ethan Carter</p>
-                            <p class="member-role">Lead Developer</p>
+                            <p class="member-name">Harsh Dev Jha</p>
+                            <p class="member-role">IOT</p>
                         </div>
                     </div>
                     <div class="team-member">
-                        <div class="member-avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC_g0PHOpUnSGD_DOvhx8UkN_sjEIyZHI79D7ML_5KMnvGkmB2coxqBbMsFt4qg43PywBUp_nAcMI-Nkm-flJ3BCELIOhtquua4t1qjctMc9cQTjaUPb1Cb06kDtGhtvf9aS5em4Xlg8RU3VgcPItYI_kJYEjUcEdIvv15lrA3L0-lIHETUDXsUvGj9yyG6t5dIqeTZkYW-baLl-rAoqi8t9IJdatwZB4nr630dqaxu0JPEkr4UYzFb6RJX7pnGHkcT5uWff4GAfwI');"></div>
+                        <div class="member-avatar" style="background-image: url('./assets/images/hkumar.png');"></div>
                         <div>
-                            <p class="member-name">Olivia Bennett</p>
-                            <p class="member-role">UI/UX Designer</p>
+                            <p class="member-name">Harsh Kumar</p>
+                            <p class="member-role">AI/ML</p>
                         </div>
                     </div>
                     <div class="team-member">
-                        <div class="member-avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBrMFWTE_07lGq06_5a0x51JtmrhuWLut_ZIybJ7_bUKysX7YftOo6y24ms9yLftlnovDogENyo4YOCC2aC-h_cMUh32j19xLjW-sNBR24FPiYlDB2XbeUYwu8Cb5ke4lA8Ift0wTKdfrlTQ56IIzZcYshlC4ug6qTpBTj_TtuCpJV32tdM9tPxPkSZgjkMKFgVqui92MxRRhAjuFYDC_Pa0M8xn2tDXwglp806ea3FYwtmq6jYo5IqPo65aOmUIkN8NJPGVvxWEMk');"></div>
+                        <div class="member-avatar" style="background-image: url('./assets/images/hraj.png');"></div>
                         <div>
-                            <p class="member-name">Noah Thompson</p>
-                            <p class="member-role">Hardware Engineer</p>
+                            <p class="member-name">Harsh Raj</p>
+                            <p class="member-role">Backend</p>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-avatar" style="background-image: url('./assets/images/hsingh.png');"></div>
+                        <div>
+                            <p class="member-name">Harsh Singh</p>
+                            <p class="member-role">Android</p>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-avatar" style="background-image: url('./assets/images/laisha.png');"></div>
+                        <div>
+                            <p class="member-name">Laisha Jaiswal</p>
+                            <p class="member-role">UI/UX</p>
                         </div>
                     </div>
                 </div>
@@ -1001,34 +285,18 @@
 
                 <h2 class="section-header">Tech Stack</h2>
                 <div class="tech-grid">
-                    <div class="tech-item"></div>
-                    <div class="tech-item"></div>
-                    <div class="tech-item"></div>
-                    <div class="tech-item"></div>
-                    <div class="tech-item"></div>
-                    <div class="tech-item"></div>
+                    <div class="tech-item"><img src="./assets/images/Kotlin.png" alt="Kotlin"></div>
+                    <div class="tech-item"><img src="./assets/images/node_js.png" alt="Kotlin"></div>
+                    <div class="tech-item"><img src="./assets/images/mongodb-logo.png" alt="Kotlin"></div>
+                    <div class="tech-item"><img src="./assets/images/ai_logo.jpg" alt="Kotlin"></div>
+                    <div class="tech-item"><img src="./assets/images/arduino_logo.png" alt="Kotlin"></div>
+                    <div class="tech-item"><img src="./assets/images/iot_logo.jpg" alt="Kotlin"></div>
                 </div>
 
                 <h2 class="section-header">Download the App</h2>
                 <div class="download-section">
                     <div class="download-buttons">
                         <button class="download-button">Download Now</button>
-                        <button class="download-button app-store-button">App Store</button>
-                    </div>
-                </div>
-
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <p class="stat-label">Downloads</p>
-                        <p class="stat-value">1,500+</p>
-                    </div>
-                    <div class="stat-card">
-                        <p class="stat-label">Active Users</p>
-                        <p class="stat-value">800+</p>
-                    </div>
-                    <div class="stat-card">
-                        <p class="stat-label">Interactions</p>
-                        <p class="stat-value">5,000+</p>
                     </div>
                 </div>
 
@@ -1036,43 +304,55 @@
                 <div class="faq-container">
                     <details class="faq-item" open>
                         <summary class="faq-summary">
-                            <p class="faq-question">What is Project Echo?</p>
+                            <p class="faq-question">How does the app Keeps me safe</p>
                             <div class="faq-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
                                     <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
                                 </svg>
                             </div>
                         </summary>
-                        <p class="faq-answer">Project Echo is an innovative solution that combines a mobile app with custom hardware to create seamless interactions between the physical and digital worlds. It allows users to trigger digital actions through physical interactions, enhancing everyday tasks and experiences.</p>
+                        <p class="faq-answer">The app lets you quickly send an SOS alert and share your live location with your trusted contacts or emergency services, so help can reach you faster.</p>
                     </details>
                     
                     <details class="faq-item">
                         <summary class="faq-summary">
-                            <p class="faq-question">How does it work?</p>
+                            <p class="faq-question">Do I need internet for the SOS feature to work?</p>
                             <div class="faq-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
                                     <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
                                 </svg>
                             </div>
                         </summary>
-                        <p class="faq-answer">The system works through three simple steps: Connect your hardware via Bluetooth, interact with physical objects through the app, and experience seamless digital outcomes in real-time.</p>
+                        <p class="faq-answer">TThe app uses both internet and SMS. If internet is unavailable, your SOS and location can still be sent via text to your emergency contacts.</p>
                     </details>
                     
                     <details class="faq-item">
                         <summary class="faq-summary">
-                            <p class="faq-question">Is it compatible with all devices?</p>
+                            <p class="faq-question">Can I call my own contacts as well as emergency services from the app?</p>
                             <div class="faq-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
                                     <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
                                 </svg>
                             </div>
                         </summary>
-                        <p class="faq-answer">Project Echo is compatible with most modern smartphones and tablets that support Bluetooth connectivity. Our hardware is designed to work across multiple platforms for maximum accessibility.</p>
+                        <p class="faq-answer">Yes. You can add your trusted contacts like family and friends, and reach them with a single tap on the emergency page. Along with that, the app also provides one-tap buttons to directly call official services such as police, ambulance, or fire. This way, whether you need help from loved ones or emergency responders, it’s always just one tap away.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-summary">
+                            <p class="faq-question">How can i contribute on this project?</p>
+                            <div class="faq-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                                    <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                                </svg>
+                            </div>
+                        </summary>
+                        <p class="faq-answer">You can support the project in many ways. If you’re a developer, you can check out our GitHub repository, report issues, or suggest new features. If you’re not technical, you can still contribute by sharing feedback, reporting bugs, or helping spread the word about the app. Every contribution makes the app safer and better for everyone.</p>
                     </details>
                 </div>
 
                 <h2 class="section-header">Contact Us</h2>
-                <div class="contact-form">
+                <div class="contact-form" id = 'contact-form'>
                     <div class="form-group">
                         <label class="form-field">
                             <p class="form-label">Name</p>

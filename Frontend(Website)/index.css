@@ -1,0 +1,790 @@
+    *{
+        margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Space Grotesk", "Noto Sans", sans-serif;
+            background-color: #111618;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            flex-grow: 1;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 40px;
+            border-bottom: 1px solid #283539;
+            white-space: nowrap;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            color: white;
+        }
+
+        .logo {
+            margin-top: 0.8rem;
+            width: 80px;
+            height: 80px;
+        }
+
+        /* .logo svg {
+            width: 100%;
+            height: 100%;
+        } */
+
+        .logo-image {
+            width: 80%;
+            height: 80%;
+            border-radius: 50%;
+
+        }
+
+
+        .company-name {
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 1.2;
+            letter-spacing: -0.015em;
+        }
+
+        .nav-section {
+            display: flex;
+            flex: 1;
+            justify-content: flex-end;
+            gap: 32px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 36px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        .theme-button, .download-button, .send-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px 16px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 0.015em;
+            min-width: 84px;
+        }
+
+        .theme-button {
+            background-color: #283539;
+            color: white;
+            height: 40px;
+        }
+
+        .download-button, .send-button {
+            background-color: #0db9f2;
+            color: #111618;
+            height: 40px;
+        }
+
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB0zHj7n1h97sJS7ttZGhrasI5NpYQpF4nwIoekkTDAgKh361l4Jh9V8exkaBX5EdfxDa1Poc3242G3PtEigZFpl6kZ8vTvCMXvcDPmoNH2DAy50VU9FHi0VepyyMILX8b0cjz_FQ0rih_Y_sXI9SKfq_kFkEsRb69GRondHLbgwhhxBRSVu-G_gftEWIL5F7ItBD786rbUMOPEbWMyui5A1Hz6xtNdeZHnxo09ZUJs7yoKuNakZwPa7_s8CgLqGhmjGLx8QhmBBTI");
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Main content */
+        .main-content {
+            padding: 0 160px;
+            display: flex;
+            flex: 1;
+            justify-content: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .content-container {
+            display: flex;
+            flex-direction: column;
+            max-width: 960px;
+            flex: 1;
+        }
+
+        /* Hero section */
+        .hero-section {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            padding: 40px 16px;
+        }
+
+        .hero-content {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .hero-image {
+            width: 70%;
+            aspect-ratio: 16/9;
+            background-image: url("./assets/images/mobile.png");
+            background-size: contain; /* Shows the full image */
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 20px;
+        }
+
+        .hero-text {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            width: 50%;
+            justify-content: center;
+        }
+
+        .hero-title {
+            font-size: 36px;
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -0.033em;
+        }
+
+        .hero-subtitle {
+            font-size: 14px;
+            font-weight: normal;
+            line-height: 1.4;
+        }
+
+        /* Section headers */
+        .section-header {
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 1.2;
+            letter-spacing: -0.015em;
+            padding: 20px 16px 12px;
+        }
+
+        /* How it works section */
+        .how-it-works {
+            padding: 40px 16px;
+        }
+
+        .section-intro {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 32px;
+            font-weight: bold;
+            line-height: 1.2;
+            letter-spacing: -0.033em;
+            max-width: 720px;
+        }
+
+        .section-description {
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 1.4;
+            max-width: 720px;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+        .step-card {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding: 16px;
+            border: 1px solid #3b4e54;
+            background-color: #1b2427;
+            border-radius: 8px;
+        }
+
+        .step-icon {
+            width: 24px;
+            height: 24px;
+            color: white;
+        }
+
+        .step-title {
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 1.2;
+            color: white;
+        }
+
+        .step-description {
+            font-size: 14px;
+            font-weight: normal;
+            line-height: 1.4;
+            color: #9cb2ba;
+        }
+
+        /* Demo video section */
+        .demo-video {
+            padding: 16px;
+        }
+
+        .video-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            aspect-ratio: 16/9;
+            border-radius: 8px;
+            padding: 16px;
+            background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD6knsIi5FC_5oLj5u6mx_hE_OgkIK1beLECkBa-2JSufIkVxivpxrIkm8bojuGpJ_z4w294w82HhgtNbR2PQ3Ue4swcOHhoProCv55h7jNI_58DewiG6A1p9fJyJKwz4g0JzpdzKlcsPCWrSKCeh1emBd13avXeNR_XLxuvfGbCcQ-iUvxpHgQwxwqwCkYq4KEhC4Bxa3ldk3R7ota3133fXRCppz0HjmsqLxCW6zYiLkEhXfLEWs5SP3U3hzHq1j8etxak4q8m24");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .play-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.4);
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .play-button svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* App screenshots */
+        .screenshots-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(158px, 1fr));
+            gap: 12px;
+            padding: 16px;
+        }
+
+        .screenshot {
+            width: 100%;
+            aspect-ratio: 3/4;
+            border-radius: 8px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .screenshot:nth-child(1) {
+            background-image: url("./assets/images/screenshot1.png");
+        }
+
+        .screenshot:nth-child(2) {
+            background-image: url("./assets/images/screenshot2.png");
+        }
+
+        .screenshot:nth-child(3) {
+            background-image: url("./assets/images/screenshot3.png");
+        }
+
+        /* Timeline */
+        .timeline {
+            display: grid;
+            grid-template-columns: 40px 1fr;
+            gap: 8px;
+            padding: 16px;
+        }
+
+        .timeline-icon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            padding-top: 12px;
+        }
+
+        .timeline-icon svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .timeline-line {
+            width: 1.5px;
+            background-color: #3b4e54;
+            height: 8px;
+            flex-grow: 1;
+        }
+
+        .timeline-content {
+            display: flex;
+            flex-direction: column;
+            padding: 12px 0;
+        }
+
+        .timeline-title {
+            font-size: 16px;
+            font-weight: 500;
+            color: white;
+        }
+
+        .timeline-date {
+            font-size: 16px;
+            font-weight: normal;
+            color: #9cb2ba;
+        }
+
+        /* Team section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(158px, 1fr));
+            gap: 12px;
+            padding: 16px;
+        }
+
+        .team-member {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            text-align: center;
+            padding-bottom: 12px;
+        }
+
+        .member-avatar {
+            width: 100%;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background-size: cover;
+            background-position: center;
+            padding: 0 16px;
+        }
+
+        .member-name {
+            font-size: 16px;
+            font-weight: 500;
+            color: white;
+        }
+
+        .member-role {
+            font-size: 14px;
+            font-weight: normal;
+            color: #9cb2ba;
+        }
+
+        .member-avatar:nth-of-type(1) {
+            background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBH0lqnRjfaZ1eCL94qG7K8mOdhuFqYi2n0ju5ETY9_-SUhHVK3-aLz7csdhK6sL3pqfRU1JEWKenWwfOFsiWJl9OAOewyXeFOZ56pAGSbhZehm7V4HkkszBvEiSjuZlZx1abnWhSxucigOlMp86VPpphqO54__mVcO60rUAtYBoqNkO9JaGgo-3VrKT29lMNGIYRTlNQTsY3KQGn3MKAdeE_JjXOJ-q5RjTvBLQk6Tw47CSm8P6QCeYsx8GVN2pmIZKSA6A1NFaQk");
+        }
+
+        /* Blog section */
+        .blog-post {
+            padding: 16px;
+        }
+
+        .blog-content {
+            display: flex;
+            align-items: stretch;
+            justify-content: space-between;
+            gap: 16px;
+            border-radius: 8px;
+        }
+
+        .blog-text {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            flex: 2;
+        }
+
+        .blog-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .blog-author {
+            font-size: 14px;
+            font-weight: normal;
+            color: #9cb2ba;
+        }
+
+        .blog-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            line-height: 1.2;
+        }
+
+        .blog-description {
+            font-size: 14px;
+            font-weight: normal;
+            color: #9cb2ba;
+            line-height: 1.4;
+        }
+
+        .read-more-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 6px 16px;
+            background-color: #283539;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            width: fit-content;
+            height: 32px;
+        }
+
+        .blog-image {
+            width: 100%;
+            aspect-ratio: 16/9;
+            border-radius: 8px;
+            background-size: cover;
+            background-position: center;
+            flex: 1;
+        }
+
+        .blog-image:nth-of-type(1) {
+            background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCPepoiQftcYfuxp8lHSl1gi2E4VbQPXk3bEFhdthDqvHVhjCw_3qPEmxHPaTUCc-EUK2xRR_e9in7BwlZYIgkNcbC0jkmE8fAqvsiT2-IFD_2IV4SwvyaW06On4kwV6jPQ9XyWtUUkAl0hXceBxPhq1bHjpIqgNf2oiGriqPDKMlFQjgHkzCTYca9fos1Oq8n6zd2qvFA71u9Bgz6fsCeUZAeaMDfWV6DYHAkpskTZxdbeUwJCalx_WLsKYLM8lZqqVn8re1Qu4h4");
+        }
+
+        /* Tech stack */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(158px, 1fr));
+            gap: 12px;
+            padding: 16px;
+        }
+
+        .tech-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            aspect-ratio: 1;
+            border-radius: 15px;
+            background-color: #283539;
+        }
+
+        .tech-item img {
+            max-width: 70%;
+            max-height: 70%;
+            object-fit: cover; 
+        }
+
+        
+
+        /* Download section */
+        .download-section {
+            display: flex;
+            justify-content: center;
+        }
+
+        .download-buttons {
+            display: flex;
+            gap: 12px;
+            padding: 12px 16px;
+            max-width: 480px;
+            justify-content: center;
+            flex: 1;
+        }
+
+        .download-buttons button {
+            flex: 1;
+        }
+
+        .app-store-button {
+            background-color: #283539;
+            color: white;
+        }
+
+        /* Stats section */
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            padding: 16px;
+        }
+
+        .stat-card {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding: 24px;
+            background-color: #283539;
+            border-radius: 8px;
+            min-width: 158px;
+            flex: 1;
+        }
+
+        .stat-label {
+            font-size: 16px;
+            font-weight: 500;
+            color: white;
+        }
+
+        .stat-value {
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 1.2;
+            color: white;
+        }
+
+        /* FAQ section */
+        .faq-container {
+            display: flex;
+            flex-direction: column;
+            padding: 16px;
+            gap: 12px;
+        }
+
+        .faq-item {
+            border: 1px solid #3b4e54;
+            background-color: #111618;
+            border-radius: 8px;
+            padding: 7px 15px;
+        }
+
+        .faq-summary {
+            display: flex;
+            cursor: pointer;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            padding: 8px 0;
+        }
+
+        .faq-question {
+            font-size: 14px;
+            font-weight: 500;
+            color: white;
+        }
+
+        .faq-icon {
+            width: 20px;
+            height: 20px;
+            color: white;
+            transition: transform 0.2s;
+        }
+
+        .faq-item[open] .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            font-size: 14px;
+            font-weight: normal;
+            line-height: 1.4;
+            color: #9cb2ba;
+            padding-bottom: 8px;
+        }
+
+        /* Contact form */
+        .contact-form {
+            max-width: 480px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            gap: 16px;
+            padding: 12px 16px;
+        }
+
+        .form-field {
+            display: flex;
+            flex-direction: column;
+            min-width: 160px;
+            flex: 1;
+        }
+
+        .form-label {
+            font-size: 16px;
+            font-weight: 500;
+            color: white;
+            padding-bottom: 8px;
+        }
+
+        .form-input, .form-textarea {
+            width: 100%;
+            padding: 16px;
+            border: none;
+            border-radius: 8px;
+            background-color: #283539;
+            color: white;
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 1.4;
+            resize: none;
+            outline: none;
+        }
+
+        .form-input {
+            height: 56px;
+        }
+
+        .form-textarea {
+            min-height: 144px;
+        }
+
+        .form-input::placeholder, .form-textarea::placeholder {
+            color: #9cb2ba;
+        }
+
+        .form-submit {
+            display: flex;
+            padding: 12px 16px;
+            justify-content: flex-end;
+        }
+
+        /* Footer */
+        footer {
+            display: flex;
+            justify-content: center;
+        }
+
+        .footer-content {
+            display: flex;
+            max-width: 960px;
+            flex: 1;
+            flex-direction: column;
+        }
+
+        .footer-inner {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+        }
+
+        .footer-links a {
+            color: #9cb2ba;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: normal;
+            min-width: 160px;
+        }
+
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+        }
+
+        .social-links a {
+            color: #9cb2ba;
+        }
+
+        .social-links svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .copyright {
+            color: #9cb2ba;
+            font-size: 16px;
+            font-weight: normal;
+        }
+
+        /* Responsive design */
+        @media (max-width: 1200px) {
+            .main-content {
+                padding: 0 80px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                padding: 0 20px;
+            }
+
+            header {
+                padding: 12px 20px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero-content {
+                flex-direction: column;
+            }
+
+            .hero-image, .hero-text {
+                width: 100%;
+            }
+
+            .hero-title {
+                font-size: 28px;
+            }
+
+            .section-title {
+                font-size: 24px;
+            }
+
+            .blog-content {
+                flex-direction: column;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 16px;
+            }
+            .status-grid {
+                grid-template-columns: repeat(2, 1fr);;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-section {
+                gap: 16px;
+            }
+
+            .download-buttons {
+                flex-direction: column;
+            }
+
+            .stats-grid {
+                flex-direction: column;
+            }
+        }
