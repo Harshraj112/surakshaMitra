@@ -1,7 +1,7 @@
 
 # 🚨 Suraksha Mitra - SOS Safety App
 
-[Download_Page](https://surakshamitra112.netlify.app/)
+[Web_Page](https://surakshamitra112.netlify.app/)
 
 Suraksha Mitra is a **personal safety and emergency response app** designed to help users quickly alert their trusted contacts and emergency services during critical situations.  
 
